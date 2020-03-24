@@ -1,0 +1,44 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <form action="/predict" method="POST">
+
+    {% if users %}
+    <select name="screen_name_a">
+        {% for user in users %}
+    <option value="{{ user }}">{{ user }}</option>
+        {% endfor %}
+    </select>
+        </ul>
+
+    {% else %}
+        <p>No users found.</p>
+    {% endif %}
+
+        <label>Twitter User A:</label>
+        <select name="screen_name_a">
+            <option value="filchyboy" selected="true">@filchyboy</option>
+        </select>
+        <br>
+
+        <label>Twitter User B:</label>
+        <select name="screen_name_b">
+            <option value="tomcoates">@tomcoates</option>
+          </select>
+        <br>
+
+        <label>Tweet Text:</label>
+        <input type="text" name="tweet_text" placeholder="community" value="community">
+        <br>
+
+        <button>Submit</button>
+    </form>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This thread here. <a href="https://t.co/qFtj8gPoKb">https://t.co/qFtj8gPoKb</a></p>&mdash; Christopher Filkins (@filchyboy) <a href="https://twitter.com/filchyboy/status/1233053502236172288?ref_src=twsrc%5Etfw">February 27, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+{% endblock %}
