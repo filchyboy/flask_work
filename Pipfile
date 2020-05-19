@@ -7,6 +7,15 @@ verify_ssl = true
 
 [packages]
 flask = "*"
+python-dotenv = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+request = "*"
+basilica = "*"
+tweepy = "*"
+scikit-learn = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7"

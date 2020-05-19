@@ -2,17 +2,17 @@
 
 import os
 from flask import Flask, jsonify, render_template, request
-from web_app.models import db, migrate
+from app.models import db, migrate
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
 
-from web_app.routes.home_routes import home_routes
-from web_app.routes.twitter_routes import twitter_routes
-from web_app.routes.admin_routes import admin_routes
-from web_app.routes.stats_routes import stats_routes
+from app.routes.home_routes import home_routes
+from app.routes.twitter_routes import twitter_routes
+from app.routes.admin_routes import admin_routes
+from app.routes.stats_routes import stats_routes
 
 SECRET_KEY = os.getenv("SECRET_KEY", default="super secret")
 DATABASE_URL = os.getenv("DATABASE_URL")

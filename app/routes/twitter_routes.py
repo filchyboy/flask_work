@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, jsonify
 
-from web_app.models import db, User, Tweet, parse_records
-from web_app.twitter_service import twitter_api
-from web_app.basilica_service import connection as basilica_client
+from app.models import db, User, Tweet, parse_records
+from app.twitter_service import twitter_api
+from app.basilica_service import connection as basilica_client
 
 twitter_api_client = twitter_api()
 
